@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h1>Create an Array I</h1>
+
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+		var cars = ["Saab", "Volvo", "BMW"];
+		document.getElementById("demo").innerHTML = "Array I = " + cars;
+	</script>
+
+<h1>Create an Array II</h1>
+
+	<p id="demo1"></p>
+
+	<script type="text/javascript">
+		var cars2 = [
+					"Saab", 
+					"Volvo", 
+					"BMW"
+					];
+		document.getElementById("demo1").innerHTML = "Array II = " + cars2;
+	</script>
+
+	<h1>Access an Array element</h1>
+	<p>Array Elements are accessed using numeric indexes(starting from 0)</p>
+
+	<p id="demo2"></p>
+
+	<script type="text/javascript">
+		document.getElementById("demo2").innerHTML = "cars[0] = " + cars[0];
+	</script>
+
+	<h1>Change an Array element</h1>
+	<p>Array Elements can be changed using numeric indexes</p>
+
+	<p id="demo3"></p>
+
+	<script type="text/javascript">
+		cars[0] = "Ford";
+		document.getElementById("demo3").innerHTML = "cars[0] = " + cars[0];
+	</script>
+
+	<h1>Find length of an Array element</h1>
+	<p>The 'length' property returns the length of an array</p>
+
+	<p id="demo4"></p>
+
+	<script type="text/javascript">
+		document.getElementById("demo4").innerHTML = "cars.length = " + cars.length;
+	</script>
+
+	<h1>Add an Array element</h1>
+	<p>The 'length' property provides an easy way to append new elements to an array without using the 'push()' method</p>
+
+	<p id="demo5"></p>
+
+	<script type="text/javascript">
+		cars[cars.length] = '<b>Toyota</b>';
+		document.getElementById("demo5").innerHTML = "Cars = " + cars;
+	</script>
+
+	<h1>Loop through an Array</h1>
+	<p>'for Loop' can be used to loop through an array</p>
+
+	<p id="demo6"></p>
+
+	<script type="text/javascript">
+		var fruits = ["Banana", "Kiwi", "Mango", "Orange"];
+		var fruitsLen = fruits.length;
+
+		txt = "<ul>";
+
+		for (var i = 0; i < fruitsLen; i++) {
+			txt += "<li>" + fruits[i] + "</li>";
+		}
+
+		txt += "</ul>";
+
+		document.getElementById("demo6").innerHTML = txt;
+	</script>
+
+	
+
+	<h1>'Undefined' holes to an Array</h1>
+	<p>Adding elements with high indexes can create 'Undefined' holes to an array</p>
+
+	<p id="demo7"></p>
+
+	<script type="text/javascript">
+		fruits[6] = 'Tomato';
+		fruitsLen = fruits.length;
+
+		txt = "<ul>";
+
+		for (var i = 0; i < fruitsLen; i++) {
+			txt += "<li>" + fruits[i] + "</li>";
+		}
+
+		txt += "</ul>";
+
+		document.getElementById("demo7").innerHTML = txt;
+	</script>
+
+
+
+	<h1>Recognized an Array</h1>
+	<h4>1:</h4>
+	<h5>The 'instanceof' operator returns 'true' when used on an array</h5>
+
+	<p id="demo8"></p>
+
+	<script type="text/javascript">
+		
+		a = fruits instanceof Array;
+		document.getElementById("demo8").innerHTML = "'fruits' is an array: "+ a;
+	</script>
+
+	<h4>2:</h4>
+	<h5>The ECMASCRIPT 5 method 'isArray()' returns 'true' when used on an array</h5>
+
+	<p id="demo9"></p>
+
+	<script type="text/javascript">
+		
+		b = Array.isArray(fruits);
+		document.getElementById("demo9").innerHTML = "'fruits' is an array: "+ a;
+	</script>
+
+
+
+
+</body>
+</html>

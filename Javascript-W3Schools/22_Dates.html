@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h1>'Date()' Method</h1>
+	
+	<p>
+	The 'Date()' function returns Day, Month, Date, Year, Time and Timezone
+	</p>
+	
+	<p id="demo"></p>
+	
+	<script type="text/javascript">
+		
+		var a = Date();
+
+		document.getElementById('demo').innerHTML = "Date() =  " + a;
+		</script>
+
+
+	<h1>'getFullYear()' Method</h1>
+	
+	<p>
+	The 'getFullYear()' function returns current Year
+	</p>
+	
+	<p id="demo1"></p>
+	
+	<script type="text/javascript">
+		
+		var dateObj = new Date();
+
+		document.getElementById('demo1').innerHTML = "dateObj.getFullYear() =  " + dateObj.getFullYear();
+		</script>	
+
+
+
+	<h1>'getTime()' Method</h1>
+	
+	<p>
+	The 'getTime()' function returns the number of milliseconds since then:
+	</p>
+	
+	<p><b>* The internal clock in Javascript count from midnight January 1, 1970</b></p>
+
+	<p id="demo2"></p>
+	
+	<script type="text/javascript">
+		
+		document.getElementById('demo2').innerHTML = "dateObj.getTime() =  " + dateObj.getTime();
+		</script>	
+
+
+	<h1>'setFullYear()' Method</h1>
+	
+	<p>
+	The 'setFullYear()' function sets the year of a date object:
+	</p>
+	
+	<p id="demo3"></p>
+	
+	<script type="text/javascript">
+		
+		dateObj.setFullYear(2021);
+
+		document.getElementById('demo3').innerHTML = "dateObj.setFullYear(2021) =  " + dateObj;
+
+		</script>	
+
+
+
+	<h1>'getDay()' Method</h1>
+	
+	<p>
+	The 'getDay()' function returns WeekDay as a Number
+	</p>
+	
+	<p id="demo4"></p>
+	
+	<script type="text/javascript">
+		
+		// reseting year back to 2020
+		dateObj.setFullYear(2020);
+
+		document.getElementById('demo4').innerHTML = "dateObj.getDay() =  " + dateObj.getDay();
+		</script>	
+
+
+		<p><b>* To get the Day name, insert Days in an 'array'</b></p>
+
+		<p id="demo5"></p>
+
+		<script type="text/javascript">
+		
+		// reseting year back to 2020
+		var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+		document.getElementById('demo5').innerHTML = "days[dateObj.getDay() - 1] =  " + days[dateObj.getDay() - 1];
+		</script>	
+		
+		<p><b>* '-1' is used in above condition because array indexing starts with 0</b></p>
+
+</body>
+</html>

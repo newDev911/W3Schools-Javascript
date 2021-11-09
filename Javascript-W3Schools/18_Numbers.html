@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h1>Exponent Notation</h1>
+	
+	<p>
+	Extra large or extra small numbers can be written with scientific (exponent) notation:
+	</p>
+	
+	<p id="demo"></p>
+	<p id="demo1"></p>
+	
+	<script type="text/javascript">
+		
+		var x = 123e5;
+		
+		var y = 123e-5;
+		
+		document.getElementById('demo').innerHTML = "x = " + x ;
+		document.getElementById('demo1').innerHTML = "y = " + y ;
+		</script>
+
+	<h1>Accurate Digits</h1>
+	<p>Integers (numbers without a period or exponent notation) are accurate upto 15 digits</p>
+	<p id="demo3"></p>
+
+	<script type="text/javascript">
+
+		var a = 999999999999999;
+		var b = 9999999999999999;
+		document.getElementById('demo3').innerHTML = "Value of a: " + a + "<br>Value of b: " + b ;
+	</script>
+
+
+	<h1>Floating Point Numbers</h1>
+	<p>Floating point numbers arithmetic is not always 100% accurate:</p>
+	<p id="demo4"></p>
+
+	<p>But it helps to multiply and divide:</p>
+	<p id="demo5"></p>
+
+
+	<script type="text/javascript">
+
+		var c = 0.2 + 0.1;
+		var d = (0.2*10 + 0.1*10) / 10;
+		document.getElementById('demo4').innerHTML = "0.2 + 0.1 = : " + c;
+		doc  
+
+
+		 document.getElementById('demo5').innerHTML = "0.2 + 0.2= : " + d;
+	</script>
+
+
+	<h1>Numeric String</h1>
+	<p>If you add two numeric strings, the result will be a concatenated string:</p>
+
+	<p id="demo6"></p>
+
+	<script type="text/javascript">
+		var e = "10";
+		var d = "20";
+		document.getElementById('demo6').innerHTML = "e = '10' <br>d = '20' <br>e + d = " + (e + d);
+	</script>
+	
+	<p>* If you add a number with numeric string, the result will also be a concatenated string:</p>
+
+	
+	<p>* Javascript will try to convert a STRING to NUMBER when substracting, multiplaying or dividing numeric strings</p>
+
+	<p id="demo7"></p>
+	<p id="demo8"></p>
+	<p id="demo9"></p>
+	
+	<script type="text/javascript">
+		document.getElementById('demo7').innerHTML = "'10' - '20' = " + (d - e);
+		document.getElementById('demo8').innerHTML = "'10' * '20' = " + (d * e);
+		document.getElementById('demo9').innerHTML = "'10' / '20' = " + (d / e);
+	</script>
+	
+
+	<h1>isNan() Functions</h1>
+	<p>Use the global 'isNan()' functions to search if the value of a variable is a 'number'</p>
+	<p>* A NUMBER divided by STRING is NaN (e.g: 10 / 'Apple' = NaN)</p>
+
+	<p id="demo10"></p>
+
+	<script type="text/javascript">
+		var f = 100 / 'apple';
+
+		document.getElementById('demo10').innerHTML = 'The value of "f" returns a number: '  + isNaN(f);
+	</script>
+
+	<p>* Result will be 'NaN' if you add 'NaN' with 'Number'</p>
+	<p>* Result will be concatenation if you add 'NaN' with 'Numeric Strign'</p>
+	<p>* The type of 'NaN' is 'Number'</p>
+
+
+	<h1>Infinity</h1>
+	<p>* Result will be 'infinity' if you calculate a number outside the larges possible number</p>
+
+	<p id="demo11"></p>
+
+	<script type="text/javascript">
+		var g = 4;
+		var h = "";
+		while(g != Infinity){
+			g = g * g;
+			h = h + g + "<br>";
+		}
+		document.getElementById('demo11').innerHTML = h;
+	</script>
+
+	<p>*Division by 'zero' will also be 'infinity'</p>
+
+	<p id="demo12"></p>
+	<p id="demo13"></p>
+
+	<script type="text/javascript">
+		var i = 2/0;
+		var j = -2/0;
+		document.getElementById('demo12').innerHTML = '2 / 0 = ' + i;
+		document.getElementById('demo13').innerHTML = '-2 / 0 = ' + j;
+	</script>
+
+	<p>* The type of 'infinity' is 'Number'</p>
+
+	<h1>Numbers To Base</h1>
+	<p>The 'toString()' method can output numbers from 'base' 2 to 36:</p>
+
+	<p id="demo14"></p>
+	<p id="demo15"></p>
+	<p id="demo16"></p>
+	<p id="demo17"></p>
+	<p id="demo18"></p>
+
+	<script type="text/javascript">
+		var k = 32;
+
+		document.getElementById('demo14').innerHTML = k + '= <br>';
+		document.getElementById('demo15').innerHTML = "Decimal = " + k.toString(10);
+		document.getElementById('demo16').innerHTML = "Hexadecimal = " + k.toString(16);
+		document.getElementById('demo17').innerHTML = "Octal = " + k.toString(8);
+		document.getElementById('demo18').innerHTML = "Binary = " + k.toString(2);
+
+	</script>
+
+
+	<h1>Number As Object</h1>
+	<p>Javascript 'Number' can be an 'Object' </p>
+
+	<p id="demo19"></p>
+	<p id="demo20"></p>
+	<p id="demo21"></p>
+
+	<script type="text/javascript">
+		// Number
+		var l = 2;
+		// Object
+		var m = new Number(124);
+
+		document.getElementById('demo19').innerHTML = "a = 2<br>b = new Number(123)";
+		document.getElementById('demo20').innerHTML = "Type of a: " + typeof(l);
+		document.getElementById('demo21').innerHTML = "Type of b: " + typeof(m);
+	</script>
+
+	<p>Objects cannot be compared</p>
+	<p id="demo22"></p>
+	<p id="demo23"></p>
+
+	<script type="text/javascript">
+		n = new Number(123);
+		o = new Number(123);
+		
+		document.getElementById('demo22').innerHTML = "num1 = new Number(123)<br>num2 = new Number(123)";
+		document.getElementById('demo23').innerHTML = "num1 == num2: " +  (n == o);
+	</script>
+
+	
+
+
+
+</body>
+</html>

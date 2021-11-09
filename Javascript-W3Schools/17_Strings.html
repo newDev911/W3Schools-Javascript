@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h1>Quotes Inside Quoted String</h1>
+	
+	<p>
+	Strings can be stored in single or double quotes
+	</p>
+	
+	<p id="demo"></p>
+	<p id="demo1"></p>	
+	
+	<script type="text/javascript">
+		// Single Quote String
+		var string1 = 'Hello!';
+		// Double Quote String
+		var string2 = "Hello World";
+		
+		document.getElementById('demo').innerHTML = "Single Quote String: <br> <b>" + string1 + "</b>";
+		document.getElementById('demo1').innerHTML = "Double Quotes String: <br> <b>" + string2 + "</b>";
+		</script>
+
+	<h1>Quotes Inside Quotes</h1>
+	<p>You can write quotes inside quotes using '\' Backslash:</p>
+	<p id="demo3"></p>
+
+	<script type="text/javascript">
+		// Quote Inside Quote
+		var string3 = 'It\'s alright, we still have the \'blade\'';
+		document.getElementById('demo3').innerHTML = "<b>" + string3 + "</b>";
+	</script>
+
+
+	<p>Or you can use different quotes inside and outside:</p>
+	<p id="demo4"></p>
+
+	<script type="text/javascript">
+		// Quote Inside Quote
+		var string4 = "It's alright, we still have the 'bazooka'";
+		document.getElementById('demo4').innerHTML = "<b>" + string4 + "</b>";
+	</script>
+	
+	<h1>Length of String</h1>
+	<p>Find length of string:</p>
+	<p id="demo5"></p>
+
+	<p>Length of String:</p>
+	<p id="demo6"></p>
+
+	<script type="text/javascript">
+	
+		var string5 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+		document.getElementById('demo5').innerHTML = "<b>" + string5 + "</b>";
+		var lenString = string5.length;
+		document.getElementById('demo6').innerHTML = "<b>" + lenString + "</b>";
+	
+	</script>
+
+
+	<h1>Break Text String</h1>
+	<p>You can break a code line with text string using backslash '\':</p>
+	<p id="demo7"></p>
+
+	<script type="text/javascript">
+	
+		document.getElementById('demo7').innerHTML = "Hello \
+			World";
+	</script>
+
+
+	<h1>Find String Position</h1>
+	<p>Find index number of string position</p>
+	<p>The 'indexOf()' function returns the position of the first occurance of a specified text:</p>
+
+	<p id="demo8"></p>
+	<p id="demo9"></p>
+
+	<script type="text/javascript">
+		var txt2 = "Please locate where 'locate' occurs";
+		var pos = txt2.indexOf("locate");
+
+		document.getElementById('demo8').innerHTML = txt2;
+		document.getElementById('demo9').innerHTML = 'Index of "locate" is: ' + pos;
+
+	</script>
+
+
+	<h1>Search in String</h1>
+	<p>Perform a global (/g) search for the letters 'ain' (/ain) in a string, and display the matches</p>
+
+	<p id="demo10"></p>
+	<p id="demo11"></p>
+
+	<script type="text/javascript">
+		var txt3 = "The rain in Spain stays mainly in the plain";
+		var pos2 = txt3.match(/ain/g);
+
+		document.getElementById('demo10').innerHTML = txt3;
+		document.getElementById('demo11').innerHTML = '"ain" in strings are: ' + pos2;
+
+	</script>
+
+
+	<h1>Replace String</h1>
+	<p>Replace 'Google' with 'Bing' below:</p>
+
+	<p id="demo12"></p>
+	<p id="demo13"></p>
+
+	<script type="text/javascript">
+		var txt4 = "Please Visit Google.com";
+		var rep = txt4.replace("Google", "Bing");
+
+		document.getElementById('demo12').innerHTML = txt4;
+		document.getElementById('demo13').innerHTML = 'Replaced Text: ' + rep;
+
+	</script>
+
+
+	<h1>Uppercase & Lowercase</h1>
+	<p>Convert String to uppercase & lowercase</p>
+
+	<p id="demo14"></p>
+	<p id="demo15"></p>
+	<p id="demo16"></p>
+
+	<script type="text/javascript">
+		var txt5 = "Hello World";
+		var up = txt5.toUpperCase();
+		var low = txt5.toLowerCase();
+
+		document.getElementById('demo14').innerHTML = txt5;
+		document.getElementById('demo15').innerHTML = 'To Upper: ' + up;
+		document.getElementById('demo16').innerHTML = 'To Lower: ' + low;
+
+	</script>
+
+
+	<h1>String Split</h1>
+	<p>Display the first array element, after a string split</p>
+
+	<p id="demo16"></p>
+	<p id="demo17"></p>
+
+	<script type="text/javascript">
+		var txt6 = "a, b, c, d, e, f";
+		var splt = txt6.split(","); // To split on space just give space between commas
+
+		document.getElementById('demo16').innerHTML = txt6;
+		document.getElementById('demo17').innerHTML = splt[3];
+
+	</script>
+
+	
+
+
+
+</body>
+</html>

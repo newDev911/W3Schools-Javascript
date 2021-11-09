@@ -1,0 +1,124 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<h1>Variables and Objects</h1>
+<p id="demo"></p>
+<p id="demo1"></p>
+	
+<script type="text/javascript">
+	var personV = "John Doe";
+	var personObj = {
+		firstName: "John",
+		lastName: "Doe",
+		age: 25,
+	}
+
+	document.getElementById('demo').innerHTML = "Variable person = " + personV;
+
+	document.getElementById('demo1').innerHTML = "Object person = \
+	<br>First name: " + personObj['firstName'] + 
+	"<br>Last name: " + personObj['lastName'] + 
+	"<br>Age: " + personObj['age'];
+</script>
+
+	<p><b>* Object can also be created using 'new' keyword</b></p>
+	<p><b>var person = new Object()</b></p>
+
+	<h1>Object Constructor</h1>
+	<p id="demo2"></p>
+
+	<script type="text/javascript">
+		// Constructor function for Person objects
+		function person(fname, lname, age){
+			this.fname = fname;
+			this.lname = lname;
+			this.age = age;
+		}
+
+		// Create a 'person' object
+		var user1 = new person('Shawn', 'Dave', 26);
+
+
+		document.getElementById('demo2').innerHTML = "User 1 data = \
+		<br>First name: " + user1.fname + 
+		"<br>Last name: " + user1.lname + 
+		"<br>Age: " + user1.age;
+	</script>
+
+	<p><b>* Javascript Objects are mutable. Any changes to the copy of an object will also change the original</b></p>
+	<p id="demo3"></p>
+	
+	<script type="text/javascript">
+		var user2 = {
+			firstName: 'Jakey',
+			lastName: 'Ma',
+			age: 30
+		};
+		// This way it will affect the original age of User2 because age is changed before printing the output
+		var m = user2;
+		m.age = 25;
+
+		document.getElementById('demo3').innerHTML = "User 2 = \
+		<br>First name: " + user2.firstName + 
+		"<br>Last name: " + user2.lastName + 
+		"<br>Age: " + user2.age;
+
+		// This way it won't affect the original age of User2 because age is changed after printing the output
+			var x = user2;
+			x.age = 32;
+			document.getElementById('demo3').innerHTML += "<br>Age = " + x.age;
+	
+	</script>
+
+	<h1>Object Properties</h1>
+
+	<h2>Access An Object Property</h2>
+	<p>There are two ways to access an object property:</p>
+	<p>You can use '.property' or ['property']</p>
+
+	<p id="demo4"></p>
+
+	<script type="text/javascript">
+		document.getElementById('demo4').innerHTML = "Using 'user1.fname' and 'user1['age']': " + user1.fname + " is " +  user1['age'] + " years old!";
+	</script>
+
+	<h2>Looping Through Properties</h2>
+	<p>User 2 data with for..in statement</p>
+	<p id="demo5"></p>
+
+	<script type="text/javascript">
+		var z;
+		var txt = "";
+		for(z in user2){
+			txt += user2[z] + "<br>";
+		}
+		document.getElementById('demo5').innerHTML = txt;
+	</script>
+
+
+	<h2>Add New Properties To Object</h2>
+	<p>Add new properties to User 2 data</p>
+	<p id="demo6"></p>
+
+	<script type="text/javascript">
+		user2.nationality = "Chinese";
+		document.getElementById('demo6').innerHTML = user2.firstName + " is " + user2.nationality;
+	</script>
+
+	<h2>Delete Object Properties</h2>
+	<button onclick="delPro()">Click here to delete 'Nationality' of User 2</button>
+	<p id="demo7"></p>
+
+	<script type="text/javascript">
+		function delPro() {
+			delete user2.nationality;
+		document.getElementById('demo7').innerHTML = 'user2.nationality = ' + user2.nationality;
+		}
+
+	</script>
+</body>
+</html>

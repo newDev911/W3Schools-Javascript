@@ -1,0 +1,70 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<h1>Try/Catch Statement</h1>
+	<p>This example shows how to use <b>catch</b> statement to display an error</p>
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+		try{
+			addlert('Hello');
+		}
+		catch(err){
+			document.getElementById('demo').innerHTML = err.message;
+		}
+	</script>
+
+	<h1>Try/Catch Statement With Confirm Box</h1>
+	<input type="button" value="View Message" onclick="msg()">
+
+	<script type="text/javascript">
+		var txt = "";
+		function msg(){
+			try{
+				addlerttt('Hello');
+			}
+			catch(err){
+				txt = "There was an error on this page.\n\n";
+				txt += "Click OK to coninue viewing this page, \n";
+				txt += "or Cancel to return to the home page.\n\n";
+
+				if(!confirm(txt)){
+					document.location.href = 'file:///e:/Tutorials/Javascript/Exercises/Javascript - w3Schools/';
+				}
+
+			}
+		}
+	</script>
+
+
+	<h1>Without Try/Catch Statement</h1>
+	<p>This example shows how to handle error with a <b>custom function</b></p>
+
+	<input type="button" value="View Messge" onclick="mesg()">
+
+	<script type="text/javascript">
+		function mesg(){
+			adddddlert('Hello');
+		}
+
+		onerror  = handleErr;
+
+		var text = "";
+
+		function handleErr(msg, url, l){
+			text = "Error: " + msg + "\n";
+			text += "URL: " + url + "\n";
+			text += "Line: " + l + "\n";
+			text += "Click OK to continue \n\n";
+
+			alert(text);
+			return true;
+		}
+	</script>
+
+</body>
+</html>

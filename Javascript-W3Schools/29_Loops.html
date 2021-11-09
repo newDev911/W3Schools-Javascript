@@ -1,0 +1,52 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<h1>Loop through an array</h1>
+
+	<p id="demo"></p>
+	<script type="text/javascript">
+		var cars = ["Ford", "Tesla", "BMW", "Jaguar", "Nisan"];
+		var txt = "";
+		for (var i = 0; i < cars.length; i++) {
+			txt += "Car " + (i+1) + ": " + cars[i] + '<br>';
+		}
+	
+	document.getElementById('demo').innerHTML = txt;
+	</script>
+
+	<h1>Loop through HTML headings from 1 to 6</h1>
+	<p id="demo2"></p>
+
+	<script type="text/javascript">
+		var txt1 = "";
+
+		for (var j = 1; j <= 6; j++) {
+			txt1 += "<h" + j + ">Heading " + j + "</h" + j + ">";
+		}
+
+		document.getElementById('demo2').innerHTML = txt1;
+
+	</script>
+
+
+	<h1>For/In Statement</h1>
+	<p>The for/in statement loops through the properties of an object</p>
+	<p id="demo3"></p>
+
+	<script type="text/javascript">
+		var txt2 = "";
+		var person = {fname:"John", lname:"Doe", age:25}; 
+
+		for (var k in person) {
+			txt2 += person[k] + '<br>';
+		}
+
+		document.getElementById('demo3').innerHTML = txt2;
+	</script>
+
+</body>
+</html>

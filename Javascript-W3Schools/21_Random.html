@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h1>'Math.random()' Method</h1>
+	
+	<p>
+	The 'Math.random' returns a number betweeen 0 to 1
+	</p>
+	
+	<p id="demo"></p>
+	
+	<script type="text/javascript">
+		
+		document.getElementById('demo').innerHTML = "Math.random() =  " + Math.random();
+		</script>
+
+
+	<h1>'Math.random()' with 'Math.floor()' Method</h1>
+	
+	<p>
+	The 'Math.floor(Math.random() * x)' returns a number betweeen 0 to 'x'
+	</p>
+	
+	<p id="demo1"></p>
+	
+	<script type="text/javascript">
+		
+		document.getElementById('demo1').innerHTML = "Math.floor(Math.random() * 10) =  " + Math.floor(Math.random() * 10);
+		</script>
+
+	<p><b>* Return a number between '1' to 'x' (both included)</b></p>	
+	
+	<p id="demo2"></p>
+	<p id="demo3"></p>
+	
+	<script type="text/javascript">
+		document.getElementById("demo2").innerHTML =  "x = '20'<br>";
+		document.getElementById("demo3").innerHTML =  Math.floor(Math.random() * 20) + 1;
+		</script>
+
+	<p><b>* Return a number between 'x' to 'y' (both included)</b></p>	
+	
+	<p id="demo4"></p>
+	<p id="demo5"></p>
+	
+	<script type="text/javascript">
+		document.getElementById("demo4").innerHTML =  "x = '20'" + "<br>" + "y = '30'";
+		document.getElementById("demo5").innerHTML =  getRandomNum(20, 30);
+
+		function getRandomNum(min, max){
+			return Math.floor(Math.random() * (max - min + 1)) + min; // simply (max + 1)
+		}
+	</script>
+
+</body>
+</html>

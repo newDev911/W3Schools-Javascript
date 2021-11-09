@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h1>Car Variable</h1>
+	<!-- Declaring a variable -->
+	<script type="text/javascript">
+		var myCar = "Toyota";
+		document.write("Car = " + myCar);
+	</script>
+
+	<h1>Car Object</h1>
+	<!-- Declaring an object -->
+	<script type="text/javascript">
+		var car = {type: "Ford", model: "2016", color: "Black"};
+		document.write("Car = " + car.type);
+		document.write("<br>" + "Model = " + car.model);
+		document.write("<br>" + "Color = " + car.color);
+	</script>
+
+	
+	<!-- Single Line Vs Multiple Line Object -->
+	<script type="text/javascript">
+	person1 = {name: 'John', age: 20};
+	document.write("<h1>Single Line Object: </h1>" + person1.name + ", " + person1.age);
+
+	person2 = {
+		name: 'Mark', 
+		age: 22
+	};
+	document.write("<h1>Multiple Line Object: </h1>" + person2.name + ", " + person2.age);
+	</script>
+
+	<h1>Access Objects</h1>
+	<p>There are two ways for accessing 'objects' in javascript
+		<h4><b>1:</b>You can use 'person.property'</h4>
+		<script type="text/javascript">
+			document.write('Name: ' + person1.name);
+		</script>
+		<h4><b>2:</b>Or you can use 'person["property"]'</h4>
+		<script type="text/javascript">
+			document.write('Age: ' + person1['age']);
+		</script>
+	</p>
+
+	<h1>Functions In Objects</h1>
+	<p>An Object method is a function definition, stored as a property value</p>
+
+	<script type="text/javascript">
+		person3 = {
+			firstName: 'Javaid',
+			lastName: 'Ali',
+			id: 413,
+			fullName: function(){
+				// It's an anonymous function
+				return this.firstName + " " + this.lastName;
+			}
+		}
+
+		document.write(person3.fullName());
+
+		document.write('<br>' + '<h4>If you access object method without "()", it\'ll print function definition</h4>');
+		
+		document.write(person3.fullName);
+	</script>
+
+</body>
+</html>

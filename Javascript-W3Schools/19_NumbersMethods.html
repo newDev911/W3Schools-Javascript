@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<h1>'valueOf()' Method</h1>
+	
+	<p>
+	The 'valueOf()' method returns Number as Number
+	</p>
+	
+	<p id="val1"></p>
+	<p id="demo"></p>
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+	
+	<script type="text/javascript">
+		
+		var a = 123;
+		
+		document.getElementById('val1').innerHTML = "num = " + a;
+		document.getElementById('demo').innerHTML = "num.valueOf(): " + a.valueOf();
+		document.getElementById('demo1').innerHTML = "(123).valueOf(): " + (123).valueOf();
+		document.getElementById('demo2').innerHTML = "(100 + 23).valueOf(): " + (100 + 23).valueOf();
+		</script>
+
+
+	<h1>'toExponential()' Method</h1>
+	
+	<p>
+	The 'toExponential()' method returns a STRING, with the NUMBER rounded and written using 'Exponential Notation'
+	</p>
+	
+	<p>* An optional parameter defines the number of digits behind the decimal point</p>
+
+	<p id="val2"></p>
+	<p id="demo3"></p>
+	<p id="demo3"></p>
+	<p id="demo4"></p>
+	<p id="demo5"></p>
+	<p id="demo6"></p>
+	
+	<script type="text/javascript">
+		
+		var b = 9.145;
+		
+		document.getElementById('val2').innerHTML = "num = " + b;
+		document.getElementById('demo3').innerHTML = "num.toExponential(): " + b.toExponential();
+		document.getElementById('demo4').innerHTML = "num.toExponential(2): " + b.toExponential(2);
+		document.getElementById('demo5').innerHTML = "num.toExponential(4): " + b.toExponential(4);
+		document.getElementById('demo6').innerHTML = "num.toExponential(6): " + b.toExponential(6);
+		</script>	
+
+
+	<h1>'toFixed()' Method</h1>
+	
+	<p>
+	The 'toFixed()' method rounds the number to a given number of digits
+	</p>
+	
+	<p>* When working with money, 'toFixed(2)' is perfect</p>
+
+	<p id="val3"></p>
+	<p id="demo7"></p>
+	<p id="demo8"></p>
+	<p id="demo9"></p>
+	<p id="demo10"></p>
+	
+	<script type="text/javascript">
+		
+		var c = 9.145;
+		
+		document.getElementById('val3').innerHTML = "num = " + c;
+		document.getElementById('demo7').innerHTML = "num.toFixed(): " + c.toFixed();
+		document.getElementById('demo8').innerHTML = "num.toFixed(2): " + c.toFixed(2);
+		document.getElementById('demo9').innerHTML = "num.toFixed(4): " + c.toFixed(4);
+		document.getElementById('demo10').innerHTML = "num.toFixed(6): " + c.toFixed(6);
+		</script>	
+
+	
+	<h1>'toPrecision()' Method</h1>
+	
+	<p>
+	The 'toPrecision()' method return a STRING, with the number written with a specified length:
+	</p>
+	
+
+	<p id="val4"></p>
+	<p id="demo11"></p>
+	<p id="demo12"></p>
+	<p id="demo13"></p>
+	<p id="demo14"></p>
+	
+	<script type="text/javascript">
+		
+		var d = 4.566;
+		
+		document.getElementById('val4').innerHTML = "num = " + d;
+		document.getElementById('demo11').innerHTML = "num.toPrecision(): " + d.toPrecision();
+		document.getElementById('demo12').innerHTML = "num.toPrecision(2): " + d.toPrecision(2);
+		document.getElementById('demo13').innerHTML = "num.toPrecision(4): " + d.toPrecision(4);
+		document.getElementById('demo14').innerHTML = "num.toPrecision(6): " + d.toPrecision(6);
+		</script>	
+
+
+	<h1>'Number()' Method</h1>
+	
+	<p>
+	The 'Number()' method converts variables to numbers:
+	</p>
+	
+
+	<p id="demo15"></p>
+	<p id="demo16"></p>
+	<p id="demo17"></p>
+	<p id="demo18"></p>	
+	<p id="demo19"></p>
+	<p id="demo20"></p>
+	<p id="demo21"></p>
+	<p id="demo22"></p>
+
+	<script type="text/javascript">
+		
+		document.getElementById('demo15').innerHTML = "Number(true): " + Number(true);
+		document.getElementById('demo16').innerHTML = "Number(false): " + Number(false);
+		document.getElementById('demo17').innerHTML = "Number('2'): " + Number("2");
+		document.getElementById('demo18').innerHTML = "Number(' 2 '): " + Number(" 2 ");
+		document.getElementById('demo19').innerHTML = "Number('2,4'): " + Number("2,4");
+		document.getElementById('demo20').innerHTML = "Number('2.4'): " + Number("2.4");
+		document.getElementById('demo21').innerHTML = "Number('2 4'): " + Number("2 4");
+		document.getElementById('demo22').innerHTML = "Number('John'): " + Number("John");
+		</script>	
+
+	<p><b>* Type of 'NaN' is also 'Number'</b></p>
+    
+
+    <h1>Convert Date to number with 'Number()' Method</h1>
+	
+	<p>
+	The 'Number()' method can also convert a Date to numbers:
+	</p>
+	
+	<p id="demo23"></p>
+
+	<script type="text/javascript">
+		var date = new Date("2017-08-30");
+		document.getElementById('demo23').innerHTML = "Number(date): " + Number(date);
+	</script>	
+
+
+
+    <h1>'parseInt()' Method</h1>
+	
+	<p>
+	Convert STRING to NUMBER with 'parseInt()' Method
+	</p>
+	
+	<p id="demo24"></p>
+
+	<script type="text/javascript">
+		
+		document.getElementById('demo24').innerHTML = "parseInt('10'): " + parseInt('10');
+	</script>	
+
+    <h1>'parseFloat()' Method</h1>
+	
+	<p>
+	Convert STRING to NUMBER with 'parseFloat()' Method
+	</p>
+	
+	<p id="demo25"></p>
+
+	<script type="text/javascript">
+		
+		document.getElementById('demo25').innerHTML = "parseFloat('10'): " + parseFloat('10');
+	</script>	
+
+	<h1>NUMBER OBJECTS</h1>
+
+	<p> - 'MAX_VALUE' returns the largest possible number in Javascript</p>
+	<p id="demo26"></p>
+
+	<script type="text/javascript">
+		var f = Number.MAX_VALUE;
+		document.getElementById('demo26').innerHTML = "Number.MAX_VALUE: " + f;
+	</script>
+
+	<p> - 'MIN_VALUE' returns the largest possible number in Javascript</p>
+	<p id="demo27"></p>
+
+	<script type="text/javascript">
+		var g = Number.MIN_VALUE;
+		document.getElementById('demo27').innerHTML = "Number.MIN_VALUE: " + g;
+	</script>
+
+</body>
+</html>

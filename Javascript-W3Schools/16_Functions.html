@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Functions</title>
+</head>
+<body>
+
+	<p id="demo"></p>
+
+	<h1>Simple Function</h1>
+	<button onclick="fun1()">Print Hello</button>
+
+	<script type="text/javascript">
+		function fun1() {
+			// body...
+			document.getElementById('demo').innerHTML = "Hello";
+		}
+	</script>
+
+	<h1>Function With Arguments</h1>
+	<p>Print First Name and Last Name</p>
+	<p id="demo1"></p>
+
+	<button onclick="fun2('John', 'Don')">Click Me</button>
+
+	<script type="text/javascript">
+		function fun2(firstName, lastName) {
+			// body...
+			document.getElementById('demo1').innerHTML = firstName + " " + lastName;
+		}
+	</script>
+
+	<h1>Calculation With Arguments</h1>
+	<p>Add two numbers with arguments</p>
+	<p id="demo2"></p>
+
+	<script type="text/javascript">
+		// Function Object
+		var x = new Function("num1", "num2", "return num1 + num2");
+		document.getElementById('demo2').innerHTML = x(4, 5);
+
+	</script>
+
+	<h1>Function With Different Arguments</h1>
+	<p>Click one of them and the same function will be called but with different argument</p>
+	<p id="demo3"></p>
+
+	<button onclick="fun4('Good Morning')">Click Me</button><span>&emsp;</span>
+	<button onclick="fun4('Good Evening')">Click Me</button>
+
+	<script type="text/javascript">
+		function fun4(txt) {
+			// body...
+			document.getElementById('demo3').innerHTML = txt;
+		}
+	</script>
+
+
+	
+	<h1>Function To Convert Fahrenheit to Celsius</h1>
+	<p>Convert Fahrenheit to Celsius with argument</p>
+	<p id="demo4"></p>
+
+	<script type="text/javascript">
+		var toCelsius = new Function("f", "return (5/9) * (f-32)");
+		document.getElementById('demo4').innerHTML = toCelsius(77);
+	</script>	
+
+	<p>If you call function without '()', it'll print the function definition</p>
+	<p id="demo5"></p>
+
+	<script type="text/javascript">
+		document.getElementById('demo5').innerHTML = toCelsius;
+	</script>	
+
+	
+</body>
+</html>

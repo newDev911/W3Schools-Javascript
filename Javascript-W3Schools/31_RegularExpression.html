@@ -1,0 +1,33 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Regular Expression</h1>
+	<p>Search a string for "w3Schools", and display the position of the match</p>
+	<p id="demo"></p>
+	<p id="demo1"></p>
+
+	<script type="text/javascript">
+		var str = "Visit w3Schools";
+		txt = str.search(/w3Schools/i);
+
+		document.getElementById('demo').innerHTML = str;
+		document.getElementById('demo1').innerHTML = "Position of 'w3Schools' is: ";
+		;
+
+	</script>
+
+	<p>Click on the button below to change 'w3Schools' to 'Microsoft'</p>
+	<input type="button" value="Change Value" onclick="changeTxt()">
+	<p id="demo2"></p>
+	<script type="text/javascript">
+		function changeTxt(){
+			var txt1 = str.replace(/w3Schools/i, "Microsoft");
+			document.getElementById('demo').innerHTML = txt1; 
+		}
+	</script>
+
+</body>
+</html>

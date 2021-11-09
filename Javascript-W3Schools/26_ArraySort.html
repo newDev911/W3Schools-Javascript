@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>My Array</h1>
+<p id="demo"></p>
+<script type="text/javascript">
+	var fruits = ["Banana", "Kiwi", "Orange", "Mango", "Apple", "Cherry"];
+	document.getElementById("demo").innerHTML = "fruits = " + fruits;
+</script>
+
+
+<h1>'sort()' Method</h1>
+<p>The 'sort()' method sorts an array alphabetically</p>
+
+	<p id="demo1"></p>
+
+	<script type="text/javascript">
+		document.getElementById("demo1").innerHTML = "fruits.sort() = " + fruits.sort();
+	</script>
+
+<h1>Sort Array In Descending Order</h1>
+<p>To 'reverse()' method reverses the elements in an array</p>
+<p>By combining 'sort()' and 'reverse()' you can sort an array in desceneding order</p>
+	
+	<p id="demo2"></p>
+	
+	<script type="text/javascript">
+		
+		fruits.sort();
+		fruits.reverse();
+		document.getElementById('demo2').innerHTML = "Array Descending Order = " + fruits;
+
+	</script>
+
+	<h1>Number Array</h1>
+	<p id="demo3"></p>
+
+<h1>Sort Number Array In Ascending Order</h1>
+<p>To sort numbers array in Javascript, you need to add a function inside 'sort()' parameter</p>
+
+	<p id="demo4"></p>
+
+	<script type="text/javascript">
+		var arr1 = [40, 650, 20, 6, 400, 34, 54];
+		document.getElementById('demo3').innerHTML = "Array = " + arr1;
+
+		arr1.sort(function(a, b){return a - b});
+		document.getElementById('demo4').innerHTML = "Sorted Array = " + arr1;
+
+	</script>
+
+
+<h1>Sort Number Array In Descending Order</h1>
+<p>To sort numbers array in Javascript, you need to add a function inside 'sort()' parameter</p>
+
+	<p id="demo5"></p>
+
+	<script type="text/javascript">
+		var arr2 = arr1;
+		arr2.sort(function(a, b){return b - a});
+		document.getElementById('demo5').innerHTML = "Sorted Array (Descending) = " + arr2;
+
+	</script>
+
+
+<h1>Sort Number Array In Random Order</h1>
+<p>To sort numbers array in Random Order, you need to add a function inside 'sort()' parameter and also return 'Math.random()' function in it</p>
+
+	<p id="demo6"></p>
+
+	<script type="text/javascript">
+		var arr2 = arr1;
+		arr2.sort(function(a, b){return 0.5 - Math.random()});
+		document.getElementById('demo6').innerHTML = "Sorted Array (Randomly) = " + arr2;
+
+	</script>
+	<p><b>	* Refresh page to sort them randomly</b></p>
+
+
+<h1>Find Lowest And Highest Number In An Array</h1>
+<p>First sort numbers array in ascending or desceneding order, then fetch the first value '[0]'</p>
+
+	<p id="demo7"></p>
+	<p id="demo8"></p>
+
+	<script type="text/javascript">
+		arr1.sort(function(a, b){return a - b});
+		document.getElementById('demo7').innerHTML = "Lowest Value = " + arr1[0];
+
+		arr1.sort(function(a, b){return b - a});
+		document.getElementById('demo8').innerHTML = "Highest Value = " + arr1[0];
+
+	</script>
+
+<h1>Find Lowest And Highest Number In An Array With 'Math.max()' and 'Math.min()'</h1>
+
+	<p id="demo9"></p>
+	<p id="demo10"></p>
+
+	<script type="text/javascript">
+	
+		document.getElementById('demo9').innerHTML = "Lowest Value = " + Math.min.apply(null, arr1);
+
+		document.getElementById('demo10').innerHTML = "Highest Value = " + Math.max.apply(null, arr1);
+
+	</script>
+
+<h1>Sort Object</h1>
+<p>Click the buttons to sort car objects on year</p>
+
+	<p id="demo11"></p>
+	<p id="demo12"></p>
+	<p id="demo13"></p>
+	
+	<button oncLick="sortFun()">Sort Now</button>
+
+	<script type="text/javascript">
+		// Cars Object
+		var cars = [
+			{type: "Tesla", year: 2045},
+			{type: "Ford", year: 2000},
+			{type: "BMW", year: 2016}
+		];
+
+		displayCars();
+
+		function sortFun(){
+			cars.sort(function (a, b) {return a.year - b.year});
+			displayCars();
+		}
+
+		function displayCars(){
+			document.getElementById('demo11').innerHTML = cars[0].type + " " + cars[0].year;
+			document.getElementById('demo12').innerHTML = cars[1].type + " " + cars[1].year;
+			document.getElementById('demo13').innerHTML = cars[2].type + " " + cars[2].year;
+		}
+
+	</script>
+
+<h1>Sort Object By 'Letters'</h1>
+<p>Click the buttons to sort car objects on 'type'</p>
+
+	<p id="demo14"></p>
+	<p id="demo15"></p>
+	<p id="demo16"></p>
+	
+	<button oncLick="sortFun1()">Sort Now</button>
+
+	<script type="text/javascript">
+		// Cars Object
+		var cars1 = [
+			{type: "Tesla", year: 2045},
+			{type: "Ford", year: 2000},
+			{type: "BMW", year: 2016}
+		];
+		displayCars1();
+
+		function sortFun1(){
+			cars1.sort(function (a, b) {
+				var x = a.type.toLowerCase();
+				var y = b.type.toLowerCase();
+				if (x < y) {return -1;}
+	   			if (x > y) {return 1;}
+	   			return 0;
+			});
+
+			displayCars1();
+		}
+
+		function displayCars1(){
+			document.getElementById('demo14').innerHTML = cars1[0].type + " " + cars1[0].year;
+			document.getElementById('demo15').innerHTML = cars1[1].type + " " + cars1[1].year;
+			document.getElementById('demo16').innerHTML = cars1[2].type + " " + cars1[2].year;
+		}
+
+	</script>
+
+</body>
+</html>

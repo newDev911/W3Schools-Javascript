@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>My Array</h1>
+<p id="demo"></p>
+<script type="text/javascript">
+	var fruits = ["Banana", "Kiwi", "Orange", "Mango"];
+	document.getElementById("demo").innerHTML = "fruits = " + fruits;
+</script>
+
+
+<h1>'push()' Method</h1>
+<p>The 'push()' method append a new element to an array</p>
+
+	<p id="demo1"></p>
+
+	<script type="text/javascript">
+		fruits.push('Pear');
+		document.getElementById("demo1").innerHTML = "fruits.push('Pear') = " + fruits;
+	</script>
+
+
+<h1>'pop()' Method</h1>
+<p>The 'pop()' method removes the last element from an array</p>
+
+	<p id="demo2"></p>
+
+	<script type="text/javascript">
+		fruits.pop();
+		document.getElementById("demo2").innerHTML = "fruits.pop() = " + fruits;
+	</script>
+
+
+<h1>'join()' Method</h1>
+<p>The 'join()' method joins array elements into a string</p>
+<p>In this example we have used "*" as a seperator between the elements</p>
+
+	<p id="demo3"></p>
+
+	<script type="text/javascript">
+		document.getElementById("demo3").innerHTML = "fruits.join(' * ') = " + fruits.join(" * ");
+	</script>
+
+
+<h1>'concat()' Method</h1>
+<p>The 'concat()' method is used to merge (concatenate) arrays:</p>
+
+	<p id="demo4"></p>
+
+	<script type="text/javascript">
+		var myGirls = ["Sarah", "Jean"];
+		var myBoys = ["John", "Jack"];
+		var myChildren = myGirls.concat(myBoys);
+		document.getElementById("demo4").innerHTML = "myGirls.concat(myBoys) = " + myChildren;
+	</script>
+
+
+<h1>'splice()' Method</h1>
+<p>The 'splice()' method adds new elements to an array:</p>
+<p><b>* array.splice(index, howmany, item1, ....)</b></p>
+<p><b>* howmany: Optional. The number of items to be removed. If set to 0, no items will be removed</b></p>
+
+	<p id="demo5"></p>
+
+	<script type="text/javascript">
+		fruitsSplice = fruits;
+		fruitsSplice.splice(2, 0, 'Lemon', 'Kiwi');
+		document.getElementById("demo5").innerHTML = "fruitsSplice.splice(2, 0, 'Lemon', 'Kiwi'); = " + fruitsSplice;
+	</script>
+
+
+<h1>'toString()' Method</h1>
+<p>The 'toString()' method returns array elements as a 'string' seperated by ',' comma</p>
+
+	<p id="demo6"></p>
+
+	<script type="text/javascript">
+		document.getElementById("demo6").innerHTML = "fruits.toString() = " + fruits.toString();
+	</script>
+
+
+<h1>'shift()' Method</h1>
+<p>The 'shift()' method removes the first element of an array (and shift all other elements to the left)</p>
+
+	<p id="demo7"></p>
+
+	<script type="text/javascript">
+		fruits.shift();
+		document.getElementById("demo7").innerHTML = "fruits.shift() = " + fruits;	
+	</script>
+	<p>* 'Banana' has been removed</p>
+
+
+<h1>'unshift()' Method</h1>
+<p>The 'unshift()' method adds new element at the beginning of an array</p>
+
+	<p id="demo8"></p>
+
+	<script type="text/javascript">
+		fruits.unshift("Banana");
+		document.getElementById("demo8").innerHTML = "fruits.unshift('Banana') = " + fruits;	
+	</script>
+	<p>* 'Banana' has been added</p>
+
+
+<h1>'slice()' Method</h1>
+<p>When the 'slice()' method is given two arguments, it selects array elements from the start argument, and upto (but not included) the last argument</p>
+
+	<p id="demo9"></p>
+
+	<script type="text/javascript">
+		var slice = fruits.slice(1, 3);
+		document.getElementById("demo9").innerHTML = "fruits.slice(1, 3) = " + fruits.slice(1, 3);	
+	</script>
+
+
+	
+
+
+</body>
+</html>

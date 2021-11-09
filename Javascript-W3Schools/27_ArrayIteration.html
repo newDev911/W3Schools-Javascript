@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h1>My Array</h1>
+<p id="demo"></p>
+<script type="text/javascript">
+	var numbers = [45, 9, 4, 16, 25];
+	document.getElementById("demo").innerHTML = "numbers = " + numbers;
+</script>
+
+
+<h1>'forEach()' Method</h1>
+<p>Calls a function once for each array element</p>
+
+	<p id="demo1"></p>
+
+	<script type="text/javascript">
+		var txt = "";
+		numbers.forEach(myFunction);
+
+		document.getElementById("demo1").innerHTML = txt;
+
+		function myFunction(value, index, array){
+			txt = txt + value + "<br>";
+		}
+	</script>
+
+
+<h1>'map()' Method</h1>
+<p>The 'map()' method creates a new array with the results of calling a function for every array element</p>
+<p>* The 'map()' method calls the provided function once for each array element</p>
+
+<p>* The 'map()' doesn't execute the function for array elements without values</p>
+
+<p>* The 'map()' doesn't change the original array</p>
+
+<p id="demo2"></p>
+
+	<script type="text/javascript">
+		var numbers2 = numbers.map(myFun2);
+
+		document.getElementById("demo2").innerHTML = "<b>Multiply array values by 2 = " +  numbers2 + "</b>";
+
+		function myFun2(value, index, array){
+			return value * 2;
+		}
+	</script>
+
+
+<h1>'filter()' Method</h1>
+<p>The 'filter()' method creates a new array with all array elements that passes the test</p>
+
+
+<p id="demo3"></p>
+
+	<script type="text/javascript">
+		var over18 = numbers.filter(myFun3);
+
+		document.getElementById("demo3").innerHTML = "Values above 18 in Array = " +  over18;
+
+		function myFun3(value, index, array){
+			return value > 18;
+		}
+	</script>
+
+
+<h1>'reduce()' Method</h1>
+<p>The 'reduce()' method finds the sum of all array elements</p>
+
+
+<p id="demo4"></p>
+
+	<script type="text/javascript">
+		var arrSum = numbers.reduce(myFun4);
+
+		document.getElementById("demo4").innerHTML = "Sum of all values= " +  arrSum;
+
+		function myFun4(total, value, index, array){
+			return total + value;
+		}
+	</script>
+
+<h1>'reduceRight()' Method</h1>
+
+<p>
+* The 'reduceRight() 'method reduces the array to a single value.</p>
+<p>
+* The 'reduceRight()' method executes a provided function for each value of the array (from right-to-left).
+</p>
+
+
+<p id="demo5"></p>
+<p id="demo6"></p>
+
+	<script type="text/javascript">
+		var arr3 = [5, 45, 30, 100];
+		var arrSub = arr3.reduceRight(myFun5);
+
+		document.getElementById("demo5").innerHTML = "Array = " +  arr3 ;
+		document.getElementById("demo6").innerHTML = "Subtract values right to left = " +  arrSub;
+
+		function myFun5(total, num){
+			return total -num;
+		}
+	</script>
+
+
+<h1>'every()' Method</h1>
+
+<p>
+ The 'every() 'method checks if all array values pass a test.</p>
+<p>
+
+
+<p id="demo7"></p>
+
+	<script type="text/javascript">
+		var evryFun = numbers.every(myFun6);
+
+		document.getElementById("demo7").innerHTML = "Every element is above 18 = " +  evryFun ;
+
+		function myFun6(value, index, array){
+			return value > 18;
+		}
+	</script>
+
+
+<h1>'some()' Method</h1>
+
+<p>
+ The 'some() 'method checks if all array values pass a test.</p>
+<p>
+
+
+<p id="demo8"></p>
+
+	<script type="text/javascript">
+		var someFun = numbers.some(myFun7);
+
+		document.getElementById("demo8").innerHTML = "Some elements are above 18 = " +  someFun ;
+
+		function myFun7(value, index, array){
+			return value > 18;
+		}
+	</script>
+
+
+<h1>'find()' Method</h1>
+
+<p>
+ The 'find() 'method returns the value of the first element that pass a test (provided as a function).
+</p>
+
+
+<p id="demo9"></p>
+<p id="demo10"></p>
+
+	<script type="text/javascript">
+		var arr4 = ["4", "9", "16", "25"];
+		var firstVal = arr4.find(myFun8);
+
+		document.getElementById("demo9").innerHTML = "Array = " +  arr4 ;
+		document.getElementById("demo10").innerHTML = "First number above 18 is = " +  firstVal ;
+
+		function myFun8(value, index, array){
+			return value > 18;
+		}
+	</script>
+
+<p><b>* Get the index of first number over 18</b></p>
+
+<p id="demo11"></p>
+
+	<script type="text/javascript">
+		var firstInd = arr4.findIndex(myFun8);
+
+		document.getElementById("demo11").innerHTML = "Index of first number above 18 is = " +  firstInd ;
+
+	</script>
+	
+
+
+</body>
+</html>

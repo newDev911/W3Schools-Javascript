@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	
+	<h1>'typeof' operator</h1>
+	<p>The 'typeof' operator returns the "Data Type" of a variable, object, function or expression</p>
+
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+		
+		document.getElementById('demo').innerHTML = 'typeof "John" = ' + typeof "John" + '<br>' +
+										'typeof 3.14 = ' + typeof 3.14 + '<br>' +
+										'typeof NaN = ' + typeof NaN + '<br>' +
+										'typeof false = ' + typeof false + '<br>' +
+										'typeof [1, 2, 3] = ' + typeof [1, 2, 3] + '<br>' +
+										'typeof {name: "John"} = ' + typeof {name:'John'} + '<br>' +
+										'typeof new Date() = ' + typeof new Date() + '<br>' +
+										'typeof function(){} = ' + typeof function(){} + '<br>' +
+										'typeof myCar = ' + typeof myCar + '<br>' +
+										'typeof null = ' + typeof null;
+
+	</script>
+
+
+	<h1>Function To Check Array(True/False)</h1>
+	<p>This function returns 'true' if a variable is an array</p>
+
+	<p id="demo1"></p>
+
+	<script type="text/javascript">
+		var nums = [1, 2, 3];
+		document.getElementById('demo1').innerHTML = "Is 'nums' is an array = " + isArray(nums);
+
+
+		function isArray(myArray){
+			return myArray.constructor.toString().indexOf("Array") > -1;
+		}
+	</script>
+
+
+	<h1>Function To Check Date(True/False)</h1>
+	<p>This function returns 'true' if a variable is a 'date'</p>
+
+	<p id="demo2"></p>
+
+	<script type="text/javascript">
+		var date = new Date();
+		document.getElementById('demo2').innerHTML = "Is 'date' is a 'Date' = " + isDate(date);
+
+
+		function isDate(myDate){
+			return myDate.constructor.toString().indexOf("Date") > -1;
+		}
+	</script>
+
+</body>
+</html>

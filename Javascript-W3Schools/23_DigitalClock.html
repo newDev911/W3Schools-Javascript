@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="startTime()">
+	<h1>Digital Clock</h1>
+	<d id="txt"></d>
+
+	<script type="text/javascript">
+		function startTime(){
+			var today = new Date();
+			var hours = today.getHours();
+			var minutes = today.getMinutes();
+			var seconds = today.getSeconds();
+
+			minutes = checkTime(minutes);
+			seconds = checkTime(seconds);
+
+			document.getElementById("txt").innerHTML = hours  + " : " + minutes  + " : " + seconds;
+
+			var t = setTimeout(startTime, 500);
+
+		}
+
+		// Add '0' before numbers less than '10'
+		function checkTime(i){
+			if(i < 10){
+				i = "0" + i;
+			}
+			return i;
+		}
+
+	</script>
+
+</body>
+</html>
